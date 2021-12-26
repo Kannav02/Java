@@ -1,6 +1,6 @@
 public class patterns {
     public static void main(String [] args){
-        pattern14(5);
+        pattern15(6);
 
     }
     static void pattern2(int n){
@@ -218,7 +218,7 @@ public class patterns {
 //   *   *
 //    * *
 //     *
-        for(int i=5;i>0;i--){
+        for(int i=n;i>0;i--){
             for(int spaces=0;spaces<n-i;spaces++){
                 System.out.print(" ");
             }
@@ -235,4 +235,49 @@ public class patterns {
         System.out.println();
         }
     }
-}
+    static void pattern15(int n){
+    //      *
+    //     * *
+    //    *   *
+    //   *     *
+    //  *       *
+    //   *     *
+    //    *   *
+    //     * *
+    //      *
+    for(int i=1;i<=n;i++){
+        for(int spaces=1;spaces<=n-i;spaces++){
+            System.out.print(" ");
+
+        }
+        for(int j=1;j<=2*i-1;j++){
+            if(j==1||j==2*i-1){
+                System.out.print("*");
+        }
+            else{
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
+            }
+    for(int i=n-1;i>=1;i--){
+        for(int spaces=1;spaces<=n-i;spaces++){
+            System.out.print(" ");
+        }
+        for(int j=1;j<=2*i-1;j++){
+            if(j==1||j==2*i-1){
+            System.out.print("*");
+
+            }
+            else{
+                System.out.print(" ");
+            }
+
+        }
+        System.out.println();
+    }     
+
+        }
+    }
+    
+
