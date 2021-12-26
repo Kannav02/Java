@@ -1,6 +1,6 @@
 public class patterns {
     public static void main(String [] args){
-        pattern11(5);
+        pattern14(5);
 
     }
     static void pattern2(int n){
@@ -164,5 +164,75 @@ public class patterns {
         System.out.println();
 
     }
+    }
+    static void pattern12(int n){
+    //  * * * * *
+    //   * * * *
+    //    * * *
+    //     * *
+    //      *
+    //      *
+    //     * *
+    //    * * *
+    //   * * * *
+    //  * * * * *
+        for(int i=0;i<2*n;i++){
+            int totalSpaces=i>n-1?(2*n-1-i):i;
+            for(int spaces=0;spaces<totalSpaces;spaces++){
+                System.out.print(" ");
+
+
+            }
+            int totalColumns=i>=n?i-n+1:n-i;
+            for(int j=0;j<totalColumns;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pattern13(int n){
+//     *
+//    * *
+//   *   *
+//  *     *
+// *********
+        for(int i=1;i<=n;i++){
+            for(int spaces=1;spaces<=n-i;spaces++){
+                System.out.print(" ");
+
+            }
+            for(int j=1;j<=2*i-1;j++){
+                if(i==5||j==1||j==2*i-1){
+                    System.out.print("*");
+            }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static void pattern14(int n){
+// *********
+//  *     *
+//   *   *
+//    * *
+//     *
+        for(int i=5;i>0;i--){
+            for(int spaces=0;spaces<n-i;spaces++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                if(i==5||j==1||j==2*i-1){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+                
+
+            }
+        System.out.println();
+        }
     }
 }
