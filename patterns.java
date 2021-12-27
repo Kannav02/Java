@@ -1,6 +1,6 @@
 public class patterns {
     public static void main(String [] args){
-        pattern15(6);
+        pattern17(4);
 
     }
     static void pattern2(int n){
@@ -275,7 +275,36 @@ public class patterns {
 
         }
         System.out.println();
+
     }     
+
+        }
+        static void pattern17(int n){
+
+        //      1
+        //     212
+        //    32123
+        //   4321234
+        //    32123
+        //     212
+        //      1
+        for(int i =1;i<=2*n-1;i++){
+            int totalSpaces=i>n?i-n:n-i;
+            for(int spaces=1;spaces<=totalSpaces;spaces++){
+                System.out.print(" ");
+
+            }
+            int totalColumns=i>n?2*n-i:i;
+            for(int j=totalColumns;j>0;j--){
+                System.out.print(j);
+
+            }
+            for(int j=2;j<=totalColumns;j++){
+                System.out.print(j);
+
+            }
+            System.out.println();
+        }
 
         }
     }
